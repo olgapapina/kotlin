@@ -8,6 +8,7 @@ package org.jetbrains.kotlin.backend.common.lower
 import org.jetbrains.kotlin.backend.common.CommonBackendContext
 import org.jetbrains.kotlin.builtins.KotlinBuiltIns
 import org.jetbrains.kotlin.ir.UNDEFINED_OFFSET
+import org.jetbrains.kotlin.ir.declarations.IrClass
 import org.jetbrains.kotlin.ir.declarations.IrSimpleFunction
 import org.jetbrains.kotlin.ir.expressions.IrConstKind
 import org.jetbrains.kotlin.ir.expressions.IrExpression
@@ -103,11 +104,16 @@ class SpecialBridgeMethods(val context: CommonBackendContext) {
         makeDescription(KotlinBuiltIns.FQ_NAMES.mutableList, "removeAt", 1) to BuiltInWithDifferentJvmName(needsGenericSignature = true)
     )
 
-    fun findSpecialWithOverride(irFunction: IrSimpleFunction): Pair<IrSimpleFunction, SpecialMethodWithDefaultInfo>? {
-        irFunction.allOverridden().forEach { overridden ->
-            val description = overridden.toDescription()
-            SPECIAL_METHODS_WITH_DEFAULTS_MAP[description]?.let {
-                return Pair(overridden, it)
+    fun findSpecialWithOverride(
+        irFunction: IrSimpleFunction,
+        includeSelf: Boolean = false
+    ): Pair<IrSimpleFunction, SpecialMethodWithDefaultInfo>? {
+        irFunction.allOverridden(includeSelf).forEach { overridden ->
+            if (overridden.parent is IrClass) {
+                val description = overridden.toDescription()
+                SPECIAL_METHODS_WITH_DEFAULTS_MAP[description]?.let {
+                    return Pair(overridden, it)
+                }
             }
         }
         return null
