@@ -1003,6 +1003,11 @@ public class FirDiagnosticsWithStdlibTestGenerated extends AbstractFirDiagnostic
             runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/multiModule/Members.kt");
         }
 
+        @TestMetadata("referenceToListListOf.kt")
+        public void testReferenceToListListOf() throws Exception {
+            runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/multiModule/referenceToListListOf.kt");
+        }
+
         @TestMetadata("SuperTypes.kt")
         public void testSuperTypes() throws Exception {
             runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/multiModule/SuperTypes.kt");

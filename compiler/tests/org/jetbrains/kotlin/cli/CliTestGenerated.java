@@ -720,6 +720,16 @@ public class CliTestGenerated extends AbstractCliTest {
             runTest("compiler/testData/cli/jvm/unknownExtraFlags.args");
         }
 
+        @TestMetadata("useDeclarationThatWasExperimentalWithoutExplicitImport.args")
+        public void testUseDeclarationThatWasExperimentalWithoutExplicitImport() throws Exception {
+            runTest("compiler/testData/cli/jvm/useDeclarationThatWasExperimentalWithoutExplicitImport.args");
+        }
+
+        @TestMetadata("useDeclarationThatWasExperimentalWithoutMarker.args")
+        public void testUseDeclarationThatWasExperimentalWithoutMarker() throws Exception {
+            runTest("compiler/testData/cli/jvm/useDeclarationThatWasExperimentalWithoutMarker.args");
+        }
+
         @TestMetadata("useMixedNamedArgumentsFlag.args")
         public void testUseMixedNamedArgumentsFlag() throws Exception {
             runTest("compiler/testData/cli/jvm/useMixedNamedArgumentsFlag.args");
