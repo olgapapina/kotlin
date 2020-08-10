@@ -3898,6 +3898,11 @@ public class FirDiagnosticsTestSpecGenerated extends AbstractFirDiagnosticsTestS
                             runTest("compiler/tests-spec/testData/diagnostics/linked/inheritance/overriding/p-5/pos/1.5.kt");
                         }
 
+                        @TestMetadata("1.6.kt")
+                        public void test1_6() throws Exception {
+                            runTest("compiler/tests-spec/testData/diagnostics/linked/inheritance/overriding/p-5/pos/1.6.kt");
+                        }
+
                         public void testAllFilesPresentInPos() throws Exception {
                             KotlinTestUtils.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/tests-spec/testData/diagnostics/linked/inheritance/overriding/p-5/pos"), Pattern.compile("^(.+)\\.kt$"), Pattern.compile("^(.+)\\.fir\\.kts?$"), true);
                         }
@@ -3949,6 +3954,11 @@ public class FirDiagnosticsTestSpecGenerated extends AbstractFirDiagnosticsTestS
                             runTest("compiler/tests-spec/testData/diagnostics/linked/inheritance/overriding/p-8/neg/1.5.kt");
                         }
 
+                        @TestMetadata("1.6.kt")
+                        public void test1_6() throws Exception {
+                            runTest("compiler/tests-spec/testData/diagnostics/linked/inheritance/overriding/p-8/neg/1.6.kt");
+                        }
+
                         public void testAllFilesPresentInNeg() throws Exception {
                             KotlinTestUtils.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/tests-spec/testData/diagnostics/linked/inheritance/overriding/p-8/neg"), Pattern.compile("^(.+)\\.kt$"), Pattern.compile("^(.+)\\.fir\\.kts?$"), true);
                         }
@@ -3998,6 +4008,11 @@ public class FirDiagnosticsTestSpecGenerated extends AbstractFirDiagnosticsTestS
                         @TestMetadata("1.5.kt")
                         public void test1_5() throws Exception {
                             runTest("compiler/tests-spec/testData/diagnostics/linked/inheritance/overriding/p-9/neg/1.5.kt");
+                        }
+
+                        @TestMetadata("1.6.kt")
+                        public void test1_6() throws Exception {
+                            runTest("compiler/tests-spec/testData/diagnostics/linked/inheritance/overriding/p-9/neg/1.6.kt");
                         }
 
                         public void testAllFilesPresentInNeg() throws Exception {

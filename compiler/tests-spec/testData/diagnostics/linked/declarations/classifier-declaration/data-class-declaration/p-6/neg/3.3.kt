@@ -7,6 +7,7 @@
  *
  * SPEC VERSION: 0.1-591
  * MAIN LINK: declarations, classifier-declaration, data-class-declaration -> paragraph 6 -> sentence 3
+ * SECONDARY LINKS: declarations, classifier-declaration, data-class-declaration -> paragraph 5 -> sentence 1
  * NUMBER: 3
  * DESCRIPTION: componentN functions cannot be explicified
  */
