@@ -72,6 +72,16 @@
           "unexpectedBehaviour": false,
           "linkType": "primary"
         }
+      ],
+      "2": [
+        {
+          "specVersion": "1.4-rfc+0.3-591",
+          "casesNumber": 2,
+          "description": "overriding member toString function of data class",
+          "path": "compiler/tests-spec/testData/diagnostics/linked/inheritance/overriding/p-5/pos/1.6.kt",
+          "unexpectedBehaviour": false,
+          "linkType": "primary"
+        }
       ]
     }
   },
